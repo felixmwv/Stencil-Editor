@@ -17,14 +17,14 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyAvaloniaApp
-build_property.ProjectDir = F:\MyAvaloniaApp\MyAvaloniaApp\
+build_property.ProjectDir = F:\Stencil-Editor\MyAvaloniaApp\MyAvaloniaApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[F:/MyAvaloniaApp/MyAvaloniaApp/App.axaml]
+[F:/Stencil-Editor/MyAvaloniaApp/MyAvaloniaApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[F:/MyAvaloniaApp/MyAvaloniaApp/MainWindow.axaml]
+[F:/Stencil-Editor/MyAvaloniaApp/MyAvaloniaApp/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

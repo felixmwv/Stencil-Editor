@@ -50,10 +50,10 @@ namespace MyAvaloniaApp
         {
             var dialog = new SaveFileDialog
             {
-                DefaultExtension = "stencil",
+                DefaultExtension = "json",
                 Filters =
                 {
-                    new FileDialogFilter { Name = "Stencil Project", Extensions = { "stencil" } }
+                    new FileDialogFilter { Name = "Stencil Project", Extensions = { "json" } }
                 }
             };
             var filePath = await dialog.ShowAsync(this);
@@ -69,7 +69,7 @@ namespace MyAvaloniaApp
                 AllowMultiple = false,
                 Filters =
                 {
-                    new FileDialogFilter { Name = "Stencil Project", Extensions = { "stencil" } }
+                    new FileDialogFilter { Name = "Stencil Project", Extensions = { "json" } }
                 }
             };
             var result = await dialog.ShowAsync(this);

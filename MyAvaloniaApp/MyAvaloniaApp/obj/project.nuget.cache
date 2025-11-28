@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ACjFfuSqGrk=",
+  "dgSpecHash": "1m94tV4c4/k=",
   "success": true,
-  "projectFilePath": "F:\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
+  "projectFilePath": "F:\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Boris\\.nuget\\packages\\avalonia\\11.3.9\\avalonia.11.3.9.nupkg.sha512",
     "C:\\Users\\Boris\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.25547.20250602\\avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
