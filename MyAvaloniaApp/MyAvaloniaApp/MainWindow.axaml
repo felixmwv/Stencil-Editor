@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MyAvaloniaApp.MainWindow"
+        Width="800" Height="450"
+        Title="MyAvaloniaApp">
+
+    <DockPanel>
+        <!-- UI knoppen -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10">
+            <Button Content="Save" Click="OnSaveClicked" Width="80"/>
+            <Button Content="Load" Click="OnLoadClicked" Width="80"/>
+            <Button Content="Spawn Circle" Click="OnSpawnCircleClicked" Width="120" Margin="10,0,0,0"/>
+        </StackPanel>
+        <Canvas x:Name="DrawingCanvas" Background="White" />
+    </DockPanel>
+
+</Window>
