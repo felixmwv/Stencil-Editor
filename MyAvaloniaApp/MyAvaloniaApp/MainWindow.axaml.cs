@@ -4,12 +4,17 @@ using Avalonia.Media;
 using Avalonia.Interactivity;
 using System;
 using MyAvaloniaApp.Shapes;
+using MyAvaloniaApp.Commands;
+using System.Collections.Generic;
+
 
 namespace MyAvaloniaApp
 {
     public partial class MainWindow : Window
     {
         private ProjectData currentProject = new ProjectData();
+        private Stack<ICommand> undoStack = new();
+        private Stack<ICommand> redoStack = new();
 
         public MainWindow()
         {
@@ -36,15 +41,46 @@ namespace MyAvaloniaApp
         private void OnSpawnCircleClicked(object? sender, RoutedEventArgs e)
         {
             var random = new Random();
+
             var circle = new CircleShape
             {
                 X = random.Next(50, 750),
                 Y = random.Next(50, 400),
                 Radius = 30
             };
-            currentProject.Circles.Add(circle);
+
+            var command = new AddCircleCommand(currentProject, circle);
+
+            command.Execute();
+            undoStack.Push(command);
+            redoStack.Clear();
+
             RedrawCanvas();
         }
+        private void OnUndoClicked(object? sender, RoutedEventArgs e)
+        {
+            if (undoStack.Count == 0)
+                return;
+
+            var command = undoStack.Pop();
+            command.Undo();
+            redoStack.Push(command);
+
+            RedrawCanvas();
+        }
+
+        private void OnRedoClicked(object? sender, RoutedEventArgs e)
+        {
+            if (redoStack.Count == 0)
+                return;
+
+            var command = redoStack.Pop();
+            command.Execute();
+            undoStack.Push(command);
+
+            RedrawCanvas();
+        }
+
 
         private async void OnSaveClicked(object? sender, RoutedEventArgs e)
         {
