@@ -10,6 +10,8 @@
             <Button Content="Save" Click="OnSaveClicked" Width="80"/>
             <Button Content="Load" Click="OnLoadClicked" Width="80"/>
             <Button Content="Spawn Circle" Click="OnSpawnCircleClicked" Width="120" Margin="10,0,0,0"/>
+            <Button Content="Spawn Rectangle" Click="OnSpawnRectangleClicked" Width="140" Margin="10,0,0,0"/>
+            <Button Content="Spawn Polygon" Click="OnSpawnPolygonClicked" Width="130" Margin="10,0,0,0"/>
             <Button Content="Undo" Click="OnUndoClicked" Width="80" Margin="10,0,0,0"/>
             <Button Content="Redo" Click="OnRedoClicked" Width="80"/>
         </StackPanel>

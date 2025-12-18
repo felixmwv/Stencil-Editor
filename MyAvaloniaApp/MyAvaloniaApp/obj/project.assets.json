@@ -1741,31 +1741,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Boris\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\felix\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
+      "projectUniqueName": "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
       "projectName": "MyAvaloniaApp",
-      "projectPath": "F:\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
-      "packagesPath": "C:\\Users\\Boris\\.nuget\\packages\\",
-      "outputPath": "F:\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\obj\\",
+      "projectPath": "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
+      "packagesPath": "C:\\Users\\felix\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\felix\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
