@@ -2,9 +2,7 @@
 
 namespace MyAvaloniaApp.Shapes;
 
-public class PolygonShape
+public class PolygonShape : ShapeBase
 {
-    public double X { get; set; }
-    public double Y { get; set; }
     public List<PointData> Points { get; set; } = new();
 }

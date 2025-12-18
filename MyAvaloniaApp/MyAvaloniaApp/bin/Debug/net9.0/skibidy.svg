@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg'>
+<circle cx='266.8' cy='187.6' r='30' transform='rotate(15 266.8 187.6)' fill='red' />
+<rect x='349.4' y='171' width='60' height='60' transform='rotate(25 379.4 201)' fill='red' />
+<rect x='400.3999999999999' y='144.4' width='60' height='60' transform='rotate(-20 430.3999999999999 174.4)' fill='red' />
+<rect x='285' y='152.00000000000006' width='60' height='60' transform='rotate(-40 315 182.00000000000006)' fill='red' />
+<polygon points='328.79999999999995,178.4 358.79999999999995,118.4 388.79999999999995,178.4' transform='rotate(50 328.79999999999995 118.4) scale(1)' fill='red' />
+<polygon points='330.40000000000003,266.20000000000005 360.40000000000003,206.20000000000007 390.40000000000003,266.20000000000005' transform='rotate(0 330.40000000000003 206.20000000000007) scale(1)' fill='red' />
+<polygon points='239.8,248.80000000000004 269.8,188.80000000000004 299.8,248.80000000000004' transform='rotate(0 239.8 188.80000000000004) scale(1)' fill='red' />
+</svg>

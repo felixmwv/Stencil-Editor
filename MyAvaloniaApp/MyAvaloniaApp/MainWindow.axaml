@@ -8,6 +8,7 @@
         <!-- UI knoppen -->
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10">
             <Button Content="Save" Click="OnSaveClicked" Width="80"/>
+            <Button Content="Export To .svg" Click="OnExportSvgClicked" Width="140"/>
             <Button Content="Load" Click="OnLoadClicked" Width="80"/>
             <Button Content="Spawn Circle" Click="OnSpawnCircleClicked" Width="120" Margin="10,0,0,0"/>
             <Button Content="Spawn Rectangle" Click="OnSpawnRectangleClicked" Width="140" Margin="10,0,0,0"/>
@@ -16,7 +17,13 @@
             <Button Content="Redo" Click="OnRedoClicked" Width="80"/>
         </StackPanel>
 
-        <Canvas x:Name="DrawingCanvas" Background="White" />
+        <Canvas x:Name="DrawingCanvas"
+                Background="White"
+                PointerPressed="OnPointerPressed"
+                PointerReleased="OnPointerReleased"
+                PointerMoved="OnPointerMoved"
+                PointerWheelChanged="OnPointerWheelChanged"/>
+
     </DockPanel>
 
 </Window>
