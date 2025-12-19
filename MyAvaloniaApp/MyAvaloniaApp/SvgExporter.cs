@@ -29,13 +29,18 @@ public static class SvgExporter
 
         foreach (var p in project.Polygons)
         {
+            var centerX = p.Points.Average(pt => pt.X);
+            var centerY = p.Points.Average(pt => pt.Y);
+
             var points = string.Join(" ",
                 p.Points.Select(pt =>
-                    $"{(pt.X + p.X)},{(pt.Y + p.Y)}"));
+                    $"{pt.X.ToString(CultureInfo.InvariantCulture)}," +
+                    $"{pt.Y.ToString(CultureInfo.InvariantCulture)}"));
 
             sb.AppendLine(
-                $"<polygon points='{points}' " +
-                $"transform='rotate({p.Rotation} {p.X} {p.Y}) scale({p.Scale})' fill='red' />");
+                $"<polygon points='{points}' fill='red' " + $"transform='" + $"translate({p.X},{p.Y}) " +
+                $"translate({centerX},{centerY}) " + $"rotate({p.Rotation}) " + $"scale({p.Scale}) " +
+                $"translate({-centerX},{-centerY})" + $"'" + $" />");
         }
 
         sb.AppendLine("</svg>");

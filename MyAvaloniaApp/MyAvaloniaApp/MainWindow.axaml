@@ -1,7 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="MyAvaloniaApp.MainWindow"
-        Width="800" Height="450"
+        Width="1200" Height="800"
         Title="MyAvaloniaApp">
 
     <DockPanel>

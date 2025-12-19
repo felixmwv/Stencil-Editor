@@ -19,7 +19,6 @@ namespace MyAvaloniaApp
         private Stack<ICommand> undoStack = new();
         private Stack<ICommand> redoStack = new();
         private ShapeBase? selectedShape;
-        private ShapeBase? hoverShape;
 
         private double startX, startY, startScale, startRotation;
 
