@@ -1,13 +1,14 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="MyAvaloniaApp.MainWindow"
-        Width="1500" Height="1200"
+        Width="1700" Height="1000"
         Title="MyAvaloniaApp">
 
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10" Spacing="8">
             <Button Content="Save" Click="OnSaveClicked" Width="80"/>
             <Button Content="Export SVG" Click="OnExportSvgClicked" Width="120"/>
+            <CheckBox x:Name="ExportPerLayerCheckBox" Content="Export Layers Separately" Margin="10,0,0,0"/>
             <Button Content="Load" Click="OnLoadClicked" Width="80"/>
             <Button Content="Undo" Click="OnUndoClicked" Width="80"/>
             <Button Content="Redo" Click="OnRedoClicked" Width="80"/>
@@ -38,7 +39,6 @@
             <Slider x:Name="BSlider" Minimum="0" Maximum="255" Width="80" ValueChanged="OnLayerColorChanged"/>
             <TextBox x:Name="HexBox" Width="80" LostFocus="OnHexChanged" Watermark="#RRGGBB"/>
         </StackPanel>
-
         <Canvas x:Name="DrawingCanvas"
                 Background="White"
                 PointerPressed="OnPointerPressed"

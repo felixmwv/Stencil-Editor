@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace MyAvaloniaApp
 {
     public class ProjectData
     {
-        public List<Layer> Layers { get; set; } = new List<Layer>();
+        public ObservableCollection<Layer> Layers { get; set; } = new();
     }
 }

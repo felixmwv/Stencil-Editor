@@ -27,13 +27,12 @@ namespace MyAvaloniaApp
         private bool isScaling = false;
         private Point lastMousePosition;
 
-        private string selectedShapeType = "Circle";
+        private string selectedShapeType;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            // Init first layer
+            
             var layer = new Layer { Name = "Layer 1", Color = Colors.Red };
             currentProject.Layers.Add(layer);
             activeLayer = layer;
@@ -109,33 +108,33 @@ namespace MyAvaloniaApp
 
         private ShapeBase? HitTest(Point mousePos)
         {
-            foreach (var layer in currentProject.Layers.AsEnumerable().Reverse())
+            if (activeLayer == null) 
+                return null;
+            
+            foreach (var shape in activeLayer.Shapes.AsEnumerable().Reverse())
             {
-                if (!layer.IsVisible)
+                if (!activeLayer.IsVisible)
                     continue;
 
-                foreach (var shape in layer.Shapes.AsEnumerable().Reverse())
+                if (shape is CircleShape c)
                 {
-                    if (shape is CircleShape c)
-                    {
-                        var dx = mousePos.X - c.X;
-                        var dy = mousePos.Y - c.Y;
-                        if (Math.Sqrt(dx * dx + dy * dy) <= c.Radius * c.Scale)
-                            return c;
-                    }
-                    else if (shape is RectangleShape r)
-                    {
-                        var dx = mousePos.X - r.X;
-                        var dy = mousePos.Y - r.Y;
-                        if (Math.Sqrt(dx * dx + dy * dy) <= r.Radius * r.Scale)
-                            return r;
-                    }
-                    else if (shape is PolygonShape p)
-                    {
-                        var local = TransformToLocal(mousePos, p);
-                        if (IsPointInPolygon(local, p))
-                            return p;
-                    }
+                    var dx = mousePos.X - c.X;
+                    var dy = mousePos.Y - c.Y;
+                    if (Math.Sqrt(dx * dx + dy * dy) <= c.Radius * c.Scale)
+                        return c;
+                }
+                else if (shape is RectangleShape r)
+                {
+                    var dx = mousePos.X - r.X;
+                    var dy = mousePos.Y - r.Y;
+                    if (Math.Sqrt(dx * dx + dy * dy) <= r.Radius * r.Scale)
+                        return r;
+                }
+                else if (shape is PolygonShape p)
+                {
+                    var local = TransformToLocal(mousePos, p);
+                    if (IsPointInPolygon(local, p))
+                        return p;
                 }
             }
 
@@ -329,7 +328,6 @@ namespace MyAvaloniaApp
 
             RedrawCanvas();
         }
-        
         #endregion
 
         #region UNDO / REDO
@@ -386,7 +384,6 @@ namespace MyAvaloniaApp
             }
         }
         
-
         private void OnLayerVisibilityChanged(object? sender, RoutedEventArgs e)
         {
             if (activeLayer != null)
@@ -438,10 +435,18 @@ namespace MyAvaloniaApp
         #region EXPORT / SAVE / LOAD
         private async void OnExportSvgClicked(object? sender, RoutedEventArgs e)
         {
-            var dialog = new SaveFileDialog { DefaultExtension = "svg" };
+            var dialog = new SaveFileDialog
+            {
+                DefaultExtension = "svg",
+                Filters = { new FileDialogFilter { Name = "SVG", Extensions = { "svg" } } }
+            };
+
             var path = await dialog.ShowAsync(this);
-            if (path != null)
-                SvgExporter.Export(currentProject, path);
+            if (path == null) return;
+            
+            bool perLayer = ExportPerLayerCheckBox.IsChecked ?? false;
+
+            SvgExporter.Export(currentProject, path, perLayer);
         }
 
         private async void OnSaveClicked(object? sender, RoutedEventArgs e)
@@ -472,10 +477,5 @@ namespace MyAvaloniaApp
             }
         }
         #endregion
-
-        private void RSlider_OnValueChanged_(object? sender, RangeBaseValueChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

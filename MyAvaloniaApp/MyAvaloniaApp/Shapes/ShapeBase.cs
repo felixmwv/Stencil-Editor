@@ -9,6 +9,6 @@
         public double Rotation { get; set; } = 0.0;
 
         public const double MinScale = 0.2;
-        public const double MaxScale = 3.0;
+        public const double MaxScale = 10.0;
     }
 }
