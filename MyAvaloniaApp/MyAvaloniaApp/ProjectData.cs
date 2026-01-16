@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
-using MyAvaloniaApp.Shapes;
 
-namespace MyAvaloniaApp;
-
-public class ProjectData
+namespace MyAvaloniaApp
 {
-    public List<CircleShape> Circles { get; set; } = new List<CircleShape>();
-    public List<RectangleShape> Rectangles { get; set; } = new List<RectangleShape>();
-    public List<PolygonShape> Polygons { get; set; } = new List <PolygonShape>();
+    public class ProjectData
+    {
+        public List<Layer> Layers { get; set; } = new List<Layer>();
+    }
 }

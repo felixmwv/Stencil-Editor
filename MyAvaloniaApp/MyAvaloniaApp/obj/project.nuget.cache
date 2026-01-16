@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X98EgOKSIPE=",
+  "dgSpecHash": "bjF5GEtZCxk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
+  "projectFilePath": "C:\\Users\\felix\\RiderProjects\\Stencil-Editor2\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felix\\.nuget\\packages\\avalonia\\11.3.9\\avalonia.11.3.9.nupkg.sha512",
     "C:\\Users\\felix\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.25547.20250602\\avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
@@ -39,10 +39,10 @@
     "C:\\Users\\felix\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\felix\\.nuget\\packages\\system.reactive\\6.1.0\\system.reactive.6.1.0.nupkg.sha512",
     "C:\\Users\\felix\\.nuget\\packages\\tmds.dbus.protocol\\0.21.2\\tmds.dbus.protocol.0.21.2.nupkg.sha512",
-    "C:\\Users\\felix\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\felix\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.11\\microsoft.windowsdesktop.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\felix\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.11\\microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\felix\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.11\\microsoft.netcore.app.host.win-x64.9.0.11.nupkg.sha512"
+    "C:\\Users\\felix\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.12\\microsoft.netcore.app.ref.9.0.12.nupkg.sha512",
+    "C:\\Users\\felix\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.12\\microsoft.windowsdesktop.app.ref.9.0.12.nupkg.sha512",
+    "C:\\Users\\felix\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.12\\microsoft.aspnetcore.app.ref.9.0.12.nupkg.sha512",
+    "C:\\Users\\felix\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.12\\microsoft.netcore.app.host.win-x64.9.0.12.nupkg.sha512"
   ],
   "logs": []
 }

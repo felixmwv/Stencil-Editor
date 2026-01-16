@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj": {}
+    "C:\\Users\\felix\\RiderProjects\\Stencil-Editor2\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj": {
+    "C:\\Users\\felix\\RiderProjects\\Stencil-Editor2\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
+        "projectUniqueName": "C:\\Users\\felix\\RiderProjects\\Stencil-Editor2\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
         "projectName": "MyAvaloniaApp",
-        "projectPath": "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
+        "projectPath": "C:\\Users\\felix\\RiderProjects\\Stencil-Editor2\\MyAvaloniaApp\\MyAvaloniaApp\\MyAvaloniaApp.csproj",
         "packagesPath": "C:\\Users\\felix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felix\\Documents\\GitHub\\Stencil-Editor\\MyAvaloniaApp\\MyAvaloniaApp\\obj\\",
+        "outputPath": "C:\\Users\\felix\\RiderProjects\\Stencil-Editor2\\MyAvaloniaApp\\MyAvaloniaApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\felix\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -83,19 +83,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.11, 9.0.11]"
+              "version": "[9.0.12, 9.0.12]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[9.0.11, 9.0.11]"
+              "version": "[9.0.12, 9.0.12]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[9.0.11, 9.0.11]"
+              "version": "[9.0.12, 9.0.12]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.11, 9.0.11]"
+              "version": "[9.0.12, 9.0.12]"
             }
           ],
           "frameworkReferences": {
@@ -103,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

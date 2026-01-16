@@ -1,20 +1,42 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="MyAvaloniaApp.MainWindow"
-        Width="1200" Height="800"
+        Width="1500" Height="1200"
         Title="MyAvaloniaApp">
 
     <DockPanel>
-        <!-- UI knoppen -->
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10" Spacing="8">
             <Button Content="Save" Click="OnSaveClicked" Width="80"/>
-            <Button Content="Export To .svg" Click="OnExportSvgClicked" Width="140"/>
+            <Button Content="Export SVG" Click="OnExportSvgClicked" Width="120"/>
             <Button Content="Load" Click="OnLoadClicked" Width="80"/>
-            <Button Content="Spawn Circle" Click="OnSpawnCircleClicked" Width="120" Margin="10,0,0,0"/>
-            <Button Content="Spawn Rectangle" Click="OnSpawnRectangleClicked" Width="140" Margin="10,0,0,0"/>
-            <Button Content="Spawn Polygon" Click="OnSpawnPolygonClicked" Width="130" Margin="10,0,0,0"/>
-            <Button Content="Undo" Click="OnUndoClicked" Width="80" Margin="10,0,0,0"/>
+            <Button Content="Undo" Click="OnUndoClicked" Width="80"/>
             <Button Content="Redo" Click="OnRedoClicked" Width="80"/>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10,10,0,0" Spacing="8">
+            <ComboBox x:Name="ShapeCombo"
+                      Width="120"
+                      SelectionChanged="OnShapeChanged">
+                <ComboBoxItem Content="Circle"/>
+                <ComboBoxItem Content="Rectangle"/>
+                <ComboBoxItem Content="Polygon"/>
+            </ComboBox>
+            </StackPanel>
+            <Button Content="Add Shape"
+                    Click="OnAddShapeClicked"
+                    Width="100"/>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10,10,0,0" Spacing="8">
+            <ComboBox x:Name="LayerCombo" Width="150" SelectionChanged="OnLayerChanged"/>
+            </StackPanel>
+            <Button Content="＋" Click="OnAddLayerClicked" Width="35"/>
+            <Button Content="🗑" Click="OnDeleteLayerClicked" Width="35"/>
+            <CheckBox x:Name="LayerVisibleCheckBox" Content="Visible" Checked="OnLayerVisibilityChanged" Unchecked="OnLayerVisibilityChanged"/>
+
+            <TextBlock Text="R"/>
+            <Slider x:Name="RSlider" Minimum="0" Maximum="255" Width="80" ValueChanged="OnLayerColorChanged"/>
+            <TextBlock Text="G"/>
+            <Slider x:Name="GSlider" Minimum="0" Maximum="255" Width="80" ValueChanged="OnLayerColorChanged"/>
+            <TextBlock Text="B"/>
+            <Slider x:Name="BSlider" Minimum="0" Maximum="255" Width="80" ValueChanged="OnLayerColorChanged"/>
+            <TextBox x:Name="HexBox" Width="80" LostFocus="OnHexChanged" Watermark="#RRGGBB"/>
         </StackPanel>
 
         <Canvas x:Name="DrawingCanvas"
@@ -23,7 +45,5 @@
                 PointerReleased="OnPointerReleased"
                 PointerMoved="OnPointerMoved"
                 PointerWheelChanged="OnPointerWheelChanged"/>
-
     </DockPanel>
-
 </Window>
