@@ -1,5 +1,6 @@
 ﻿using Avalonia.Media;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using MyAvaloniaApp.Shapes;
 
 namespace MyAvaloniaApp
@@ -10,7 +11,7 @@ namespace MyAvaloniaApp
         public bool IsVisible { get; set; } = true;
         public Color Color { get; set; } = Colors.Red;
 
-        public List<ShapeBase> Shapes { get; set; } = new List<ShapeBase>();
+        public ObservableCollection<ShapeBase> Shapes { get; set; } = new();
         
         public override string ToString()
         {

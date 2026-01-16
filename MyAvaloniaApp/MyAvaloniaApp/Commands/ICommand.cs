@@ -19,10 +19,37 @@ namespace MyAvaloniaApp.Commands
             this.shape = shape;
         }
 
-        public void Execute() => layer.Shapes.Add(shape);
-        public void Undo() => layer.Shapes.Remove(shape);
-    }
+        public void Execute()
+        { 
+            layer.Shapes.Add(shape);
+        }
 
+        public void Undo()
+        {
+            layer.Shapes.Remove(shape);
+        } 
+    }
+    public class RemoveShapeCommand : ICommand
+    {
+        private Layer layer;
+        private ShapeBase shape;
+
+        public RemoveShapeCommand(Layer layer, ShapeBase shape)
+        {
+            this.layer = layer;
+            this.shape = shape;
+        }
+
+        public void Execute()
+        {
+            layer.Shapes.Remove(shape);
+        }
+
+        public void Undo()
+        {
+            layer.Shapes.Add(shape);
+        }
+    }
     public class TransformCommand : ICommand
     {
         private ShapeBase shape;

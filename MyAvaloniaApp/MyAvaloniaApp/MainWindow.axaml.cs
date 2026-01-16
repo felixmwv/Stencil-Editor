@@ -226,16 +226,34 @@ namespace MyAvaloniaApp
         {
             var pos = e.GetPosition(DrawingCanvas);
             selectedShape = HitTest(pos);
-            if (selectedShape == null) return;
 
             lastMousePosition = pos;
-            startX = selectedShape.X;
-            startY = selectedShape.Y;
-            startScale = selectedShape.Scale;
-            startRotation = selectedShape.Rotation;
+
+            if (selectedShape != null)
+            {
+                startX = selectedShape.X;
+                startY = selectedShape.Y;
+                startScale = selectedShape.Scale;
+                startRotation = selectedShape.Rotation;
+            }
+            
+            if (selectedShape != null &&
+                e.GetCurrentPoint(this).Properties.IsLeftButtonPressed &&
+                e.GetCurrentPoint(this).Properties.IsRightButtonPressed)
+            {
+                var removeCmd = new RemoveShapeCommand(activeLayer, selectedShape);
+                removeCmd.Execute();
+                undoStack.Push(removeCmd);
+                redoStack.Clear();
+
+                selectedShape = null;
+                RedrawCanvas();
+                return;
+            }
 
             if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
                 isDragging = true;
+
             if (e.GetCurrentPoint(this).Properties.IsRightButtonPressed)
                 isScaling = true;
         }
